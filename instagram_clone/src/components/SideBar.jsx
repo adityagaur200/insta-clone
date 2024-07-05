@@ -2,6 +2,7 @@ import React from 'react'
 import {Avatar, Box,Flex,flexbox,Image,Link, Tooltip} from '@chakra-ui/react'
 import {Link as RouterLink} from 'react-router-dom'
 import {AiFillHome} from "react-icons/ai"
+import {BiLogOut} from 'react-icons/bi'
 import { CreatePostLogo, InstagramLogo, NotificationsLogo, SearchLogo } from '../assests/logos'
 function SideBar() {
   const sidebarItems =[
@@ -49,6 +50,7 @@ function SideBar() {
           {sidebarItems.map((item,index)=>
           (
             <Tooltip
+            key={index}
             hasArrow
             label={item.text}
             placement='right'
@@ -68,13 +70,39 @@ function SideBar() {
               >
                 {item.icon}
                 <Box display={{base:'none',md:"block"}}>
-                  {item.text}
+                   {item.text}
                 </Box>
               </Link>
             </Tooltip>
           )
           )}
         </Flex>
+        <Tooltip
+            hasArrow
+            label={'Log Out'}
+            placement='right'
+            ml={1}
+            openDelay={500}
+            display={{md:"none"}}
+            >
+              <Link
+              display={"flex"}
+              to={'/AuthPage'}
+              as={RouterLink}
+              gap={4}
+              _hover={{bg:"whiteAlpha.400"}}
+              borderRadius={6}
+              p={2}
+              w={'full'}
+              mt={'auto'}
+              >
+                <BiLogOut size={25}/>
+                <Box display={{base:'none',md:"block"}}>
+                  Log Out
+                </Box>
+              </Link>
+            </Tooltip>
+         
       </Flex>
     </Box>
   )
