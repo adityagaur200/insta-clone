@@ -7,13 +7,13 @@ function ProfileHeader() {
         <AvatarGroup size={{base:'xl',md:'2xl'}} justifySelf={'center'} alignSelf={'flex-start'} mx={'auto'}>
             <Avatar src='/profilepic.png' name='Aditya'/>
         </AvatarGroup>
-        <VStack alignItems={'start'} gap={2} flex={1}>
+        <VStack alignItems={'start'} gap={2} flex={1} justifyContent={'center'}>
             <Flex gap={4} direction={{base:'column',sm:'row'}} justifyContent={{base:'center',sm:"flex-start"}} alignItems={'center'} w={'full'}>
                 <Text fontSize={'lg'}>
                         Aditya
                 </Text>
-                <Flex gap={4} alignItems={'center'} justifyContent={'center'}>
-                    <Button bg={'white'} color={'black'} _hover={{bg:"whiteAlpha.800"}} size={'sm'}>
+                <Flex gap={4} alignItems={'center'} justifyContent={'center'} ml={25} >
+                    <Button bg={'white'} color={'black'} _hover={{bg:"whiteAlpha.800"}} size={'sm'} >
                         Edit Profile
                     </Button>
                 </Flex>
