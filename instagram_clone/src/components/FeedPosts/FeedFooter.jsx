@@ -20,7 +20,7 @@ function FeedFooter() {
     }
   }
   return (
-    <Box mb={10}>
+    <Box mb={10} mt={'auto'}>
     <Flex justifyItems={'center'} gap={4} mt={3}>
       <Box onClick={handleLike} cursor={'pointer'} fontSize={8}>
         {!liked ? <NotificationsLogo /> : <UnlikeLogo />}

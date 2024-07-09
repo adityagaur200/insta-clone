@@ -5,6 +5,7 @@ import {FaComment} from 'react-icons/fa'
 import {Modal,ModalOverlay,ModalContent,ModalHeader,ModalCloseButton,ModalBody,useDisclosure, Box, Avatar, Divider, VStack} from '@chakra-ui/react'
 import {MdDelete} from "react-icons/md"
 import Comment from '../Comment'
+import FeedFooter from '../FeedPosts/FeedFooter'
 function ProfilePost({img}) {
   const { isOpen, onOpen, onClose } = useDisclosure()
   return (
@@ -91,6 +92,8 @@ function ProfilePost({img}) {
                 />
                 
               </VStack>
+              <Divider my={4} bg={'gray.500'}/>
+              <FeedFooter />
           </Flex>
         </Flex>
       </ModalBody>
