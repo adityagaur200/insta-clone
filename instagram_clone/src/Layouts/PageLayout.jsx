@@ -4,10 +4,11 @@ import { useLocation } from 'react-router-dom'
 
 import SideBar from '../components/SideBar'
 function PageLayout({children}) {
-    const {pathname} = useLocation()
+    const {pathname} = useLocation();
+    const canRenderSidebar = pathname !== "/AuthPage" && user;
   return (
     <Flex>
-        {pathname !== '/AuthPage' ? (
+        {canRenderSidebar ? (
             <Box w={'270px'}>
             <SideBar/>
            </Box>
