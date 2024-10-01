@@ -1,11 +1,11 @@
 import React from 'react'
 import {Avatar, Box,Flex,Button,Link, Tooltip} from '@chakra-ui/react'
-import {Link as RouterLink} from 'react-router-dom'
+import {Link as RouterLink, useNavigate} from 'react-router-dom'
 import {AiFillHome} from "react-icons/ai"
 import {BiLogOut} from 'react-icons/bi'
 import { CreatePostLogo, InstagramLogo, NotificationsLogo, SearchLogo } from '../assests/logos'
-import useLogout from '../hooks/useLogout'
 function SideBar() {
+  const Navigate = useNavigate();
   const sidebarItems =[
     {
       icon: <AiFillHome size ={25}/>,
@@ -31,7 +31,6 @@ function SideBar() {
       link:"/Aditya",
     },
   ];
-  const {handleLogout,isloggingOut} = useLogout();
   return (
     <Box
     height={'100vh'}
@@ -88,7 +87,7 @@ function SideBar() {
             display={{md:"none"}}
             >
               <Flex
-              onClick={handleLogout}
+              
               alignItems={'center'}
               gap={4}
               _hover={{bg:"whiteAlpha.400"}}
@@ -98,7 +97,7 @@ function SideBar() {
               mt={'auto'}
               >
                 <BiLogOut size={25}/>
-                <Button display={{base:'none',md:"block"}} variant={'ghost'} _hover={{bg:"transparent"}} isLoading={isloggingOut}>
+                <Button display={{base:'none',md:"block"}} variant={'ghost'} _hover={{bg:"transparent"}} onClick={()=>Navigate("/login")}>
                   Log Out
                 </Button>
               </Flex>

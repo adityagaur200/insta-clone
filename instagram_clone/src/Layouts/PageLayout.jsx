@@ -1,11 +1,11 @@
 import React from 'react'
 import {Box,calc,Flex} from '@chakra-ui/react'
 import { useLocation } from 'react-router-dom'
-
+import "../index.css"
 import SideBar from '../components/SideBar'
 function PageLayout({children}) {
     const {pathname} = useLocation();
-    const canRenderSidebar = pathname !== "/AuthPage" && user;
+    const canRenderSidebar = pathname !== "/AuthPage";
   return (
     <Flex>
         {canRenderSidebar ? (

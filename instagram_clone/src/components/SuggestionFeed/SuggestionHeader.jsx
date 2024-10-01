@@ -13,7 +13,7 @@ function SuggestionHeader() {
                Aditya
             </Flex> 
             <Flex ml={'50px'}>
-            <Link to = {'/AuthPage'} as={RouterLink} display={'block'} cursor={'pointer'}>
+            <Link to = {'/login'} as={RouterLink} display={'block'} cursor={'pointer'}>
                 <Button colorScheme='teal' variant='ghost' size={'sm'} >
                     Log Out
                 </Button>

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import {useNavigate} from 'react-router-dom'
-import {Box, VStack,Image, Input, Button, Flex, Text} from '@chakra-ui/react'
+import {Box, VStack,Image, Input, Button, Flex, Text, Stack} from '@chakra-ui/react'
 import Signup from './Signup'
 import Login from './Login'
 import GoogleAuth from './GoogleAuth'
@@ -8,8 +8,8 @@ function AuthForm() {
   const[isLogin,setIsLogin] =useState(true)
   
   return (
-    <>
-      <Box border={"1px solid gray"} borderRadius={4} padding={5} w={"150%"}>
+    <Stack direction={'column'} gap={2} alignItems={'center'} justifyContent={'center'} marginTop={"10vh"}>
+      <Box border={"1px solid gray"} borderRadius={4} padding={5} width={"50vh"}>
         <VStack spacing={4}>
         <Image src='/logo.png' h={75} cursor={"pointer"}/>
         
@@ -22,7 +22,7 @@ function AuthForm() {
        <GoogleAuth/>
         </VStack>
       </Box>
-      <Box border={'1px solid gray'} borderRadius={4} padding={5} w={'150%'}>
+      <Box border={'1px solid gray'} borderRadius={4} padding={5}  width={"50vh"}>
         <Flex alignItems={'center'} justifyContent={'center'}>
           <Box mx={2} fontSize={14}>
             {isLogin? "Don't have an account?" : "Already have an account?"}
@@ -32,7 +32,7 @@ function AuthForm() {
           </Box>
         </Flex>
       </Box>
-    </>
+    </Stack>
   )
 }
 
