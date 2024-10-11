@@ -1,4 +1,5 @@
 Instagram Clone
+
 Description
 This is a full-stack Instagram clone application built using React for the frontend and Spring Boot for the backend. The application supports user authentication, posting images, liking, commenting, and viewing posts in a social media-like feed.
 
